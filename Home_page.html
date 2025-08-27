@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IruSha's Hand Cricket</title>
+    <link rel="style" href="tossingStyle.css">
+    <script defer src="Home_page.js"></script>
+</head>
+<body style="background: linear-gradient(to left, #5fff5f, #feb47b);">
+    <div id="div1">
+        <h1>IruSha's Hand Cricket</h1>
+        <hr>
+    
+    <style>
+        .sideWindow{
+            position: fixed;
+            top: 10rem;
+            left: -18.75rem;
+            width: 10rem;
+            height: 30%;
+            background: white;
+            padding: 1.5rem;
+            margin-left: 1rem;
+            transition: right 0.4s;
+            box-shadow: 0.7rem 0 0.7rem rgba(0, 0, 0, 0.6);
+        }
+
+        .sideWindow.active {
+            left: 0;
+        }
+
+        .change{
+            transition: 0.3s;
+            box-shadow: 0.3rem 0 0.9rem rgb(0, 0, 0,0.6);
+        }
+        .change:hover{
+            transform: scale(1.05);
+            box-shadow: 0.3rem 0 0.9rem rgb(0, 0, 0,0.6);
+        }
+    </style>
+        
+    <button class="change" onclick="changer()" style="
+    width: auto; 
+    right: 1rem; 
+    cursor: pointer;
+    background-color: antiquewhite;"><p id="outputName"></p></button>
+        <div id="sideWindow" class="sideWindow">
+            <p id="profOutput1" style="color: blue;"></p>
+            <hr>
+            <p id="profOutput2" style="color: blue;"></p>
+            <hr>
+            <p style="color: blue;">To change name and gender Log Out.</p>
+            <button id="logOutBtn" onclick="logOut()" style="
+            border-color: red; 
+            color: red; 
+            background: white;
+            cursor: pointer;">Log Out</button>
+        </div>
+
+    </div>
+    <div id="div2" style="text-align: center;">
+        <h2>Play With Computer!</h2>
+        <p>Toss before Playing..</p>
+        <p>
+            <input type="radio" id="head" name="choice" value="Head" style="cursor: pointer;">
+            <label for="head">Head</label>
+            <input type="radio" id="tail" name="choice" value="Tail" style="cursor: pointer;">
+            <label for="tail">Tail</label>
+        </p>
+
+        <style>
+            #tossBtn {
+            font-size: 1.25rem;
+            font-weight: bold;
+            height: 5rem;
+            width: 5rem;
+            border-radius: 5rem;
+            background-color: rgb(255, 0, 0);
+            color: white;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            perspective: 62.5rem;
+            transition: 0.3s;
+            box-shadow: 0rem 0 0.9rem rgb(0, 0, 0,0.6);
+            }
+
+            .tossBtn:hover {
+                transform: scale(1.05);
+                box-shadow: 0rem 0 0.3rem rgb(0, 0, 0,0.6);
+            }
+
+            @keyframes flip{
+                 0% {transform: rotateX(0deg);}
+                100% {transform: rotateX(360deg);}
+            }
+
+            .flipping {
+            animation: flip 0.5s linear infinite;
+            }
+
+            #notesBtn {
+                background-color: antiquewhite;
+                height: 2.5rem; width: 7rem;
+                border-radius: 1.25rem;
+                cursor: pointer;
+            }
+        </style>
+        <button class="tossBtn" id="tossBtn"onclick="Toss()">Toss</button>
+    </div>
+    <div>
+        <style>
+            .notes{
+                transition: 0.3s;
+                box-shadow: 0rem 0 0.9rem rgb(0, 0, 0,0.6);
+            }
+            .notes:hover{
+                transform: scale(1.05);
+                box-shadow: 0rem 0 0.9rem rgb(0, 0, 0,0.6);
+            }
+        </style>
+        <button id="notesBtn" class="notes" onclick="playNotes()">How to Play &#9660</button>
+        <p id="notes"></p>
+        <p id="step1"></p>
+        <p id="step2"></p>
+        <p id="step3"></p>
+        <p id="step4"></p>
+        <p id="step5"></p>
+        <p id="step6"></p>
+        <p id="step7"></p>
+        <p id="step8"></p>
+        <p id="step9"></p>
+    </div>
+</body>
+</html>

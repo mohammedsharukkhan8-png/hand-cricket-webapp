@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irusha's Hand Cricket</title>
+    <script defer src="Home_page.js"></script>
+</head>
+<body style="background: linear-gradient(to right, #c3ffff, #d9ffae)">
+    <div id="div1">
+        <h1>IruSha's Hand Cricket</h1>
+        <hr>
+        
+    <p id="output2" style="margin-top: 25px; margin-bottom: 25px;"></p>
+    <h3><p id="output3"></p></h3>
+    </div>
+
+<style>
+  .container {
+    display: flex;
+    height: 20rem;
+    margin-bottom: 4rem;
+  }
+  .left {
+    /* background-color: lightblue; */
+    /* background-color: white; */
+    width: 50%;
+    justify-items: center;
+  }
+  .right {
+    /* background-color: lightgreen; */
+    /* background-color: white; */
+    width: 50%;
+    justify-items: center;
+  }
+
+  /* .images {
+    transition: 0.5s ease;
+  }
+  .zoomIn {
+    animation: zoomIn 1s ease-in-out forwards;
+  }
+ @keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+ } */
+</style>
+
+    <div class="container">
+        <div class="left">
+            <h2><p id="userName"></p></h2>
+            <img id="handImage1" class="images" alt="Hand Image" src="Images/0.jpg" height="70%" width="40%"
+             style="display: block;
+             margin: 0 auto;">
+            <p id ="output1" style="font-size: 2.5rem;"></p>
+        </div>
+  
+        <div class="right">
+            <h2>Computer</h2>
+            <img id="handImage2" class="images" alt="Hand Image" src="Images/0.jpg" height="70%" width="40%"
+             style="display: block;
+             margin: 0 auto;">
+            <p id ="output0" style="font-size: 2.5rem;"></p>
+        </div>
+    </div>
+
+    <table border="2" style="margin: auto;">
+            <tr>
+                <td><button onclick="cellClicked(1)" style="background: linear-gradient(to right,lightblue,white,lightgreen); font-weight: bold;">1</button></td>
+                <td><button onclick="cellClicked(2)" style="background: linear-gradient(to right,lightblue,white,lightgreen); font-weight: bold;">2</button></td>
+                <td><button onclick="cellClicked(3)" style="background: linear-gradient(to right,lightblue,white,lightgreen); font-weight: bold;">3</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="cellClicked(4)" style="background: linear-gradient(to right,lightblue,white,lightgreen); font-weight: bold;">4</button></td>
+                <td><button onclick="cellClicked(5)" style="background: linear-gradient(to right,lightblue,white,lightgreen); font-weight: bold;">5</button></td>
+                <td><button onclick="cellClicked(6)" style="background: linear-gradient(to right,lightblue,white,lightgreen); font-weight: bold;">6</button></td>
+            </tr>
+            <tr>
+                <td><!--<button onclick="cellClicked(0)">0</button>--></td>
+                <td><button onclick="cellClicked(0)" style="background: linear-gradient(to right,lightblue,white,lightgreen); font-weight: bold;">0</button></td>
+                <td><!--<button onclick="cellClicked(2,2)">9</button>--></td>
+            </tr>
+        </table>
+
+        <button style="
+            background-color: rgb(236, 210, 45);
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            height: 2.2rem;
+            width: 9.5rem;
+            font-size: 1rem;
+            border-radius: 1rem;"
+            onclick="homePage()">
+            &#8592  Home page
+        </button>
+        
+</body>
+</html>

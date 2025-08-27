@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IruSha's Hand Cricket</title>
+
+    <script defer src="Login_page.js"></script>
+
+    <div>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 1.5%;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 1rem;
+      background-color: #4285F4;
+      color: white;
+      border: none;
+      border-radius: 1.2rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #357ae8;
+    }
+    </style>
+</head>
+
+
+<body>
+    <div id="screen1">
+      <h1 style="margin-bottom: 5%;">IruSha's Hand Cricket</h1>
+      <hr>
+      <p style="margin-top: 10%;">Name :
+      <input id="userName" type="text" placeholder="Enter Name"></input></p>
+      
+      <p style="margin-bottom: 10%;">Gender  : 
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+        
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+      </p>
+      <hr style="margin-bottom: 5%;">
+      <style>
+        button{
+          transition: 0.3s;
+          box-shadow: 0.3rem 0 0.9rem rgb(0, 0, 0,0.6);
+        }
+
+        button:hover{
+          transform: scale(1.05);
+          box-shadow: 0.3rem 0 0.9rem rgb(0, 0, 0,0.6);
+        }
+      </style>
+      <button onclick="login()">Sign in &#10140</button>
+    </div>
+</body>
+</html>
