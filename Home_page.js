@@ -117,7 +117,7 @@ function Toss(){
 
 function nextToss(toss_Choice){
     localStorage.setItem("anotherSumma","true");
-    localStorage.setItem("start","true")
+    localStorage.setItem("start","true");
     localStorage.setItem("summa","true");
     if(toss_Choice){
         localStorage.setItem("tossChoiceByUser",toss_Choice.value);
