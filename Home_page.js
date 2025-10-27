@@ -144,13 +144,13 @@ function nextToss(toss_Choice){
         } else{
             alert("Oops! You lose the Toss.")
             if(computerChoose == 0){
-                alert("Computer chooses to Batting, then you have to do Bowling now.");
+                alert("Computer chooses to Bowling, then you have to do Batting now.");
                 localStorage.setItem("compDecision","batting");
                 alert("Game Started!"); 
                 window.location.href = "Game_page.html";
                 bowling();
             } else if(computerChoose == 1){
-                alert("Computer chooses to Bowling, then you have to do Batting now.");
+                alert("Computer chooses to Batting, then you have to do Bowling now.");
                 localStorage.setItem("compDecision","bowling");
                 alert("Game Started!"); 
                 window.location.href = "Game_page.html";
@@ -209,7 +209,7 @@ function cellClicked(value){
         let knowDecision = localStorage.getItem("decision");
         if(changer == "true"){
             if(value != randNum){
-                document.querySelectorAll('.images');
+                 document.querySelectorAll('.images');
                 if(knowDecision == "batting"){
                     let Score = runScorer(value);
                     imageLoader1(value);
@@ -232,6 +232,7 @@ function cellClicked(value){
                 if(changer == "true"){
                     flowChanger();
                 } else{
+                     alert("Wicket!");
                     endGame();
                 }
             }
@@ -258,6 +259,7 @@ function cellClicked(value){
                     alert("Error");
                     }
                 } else{
+                    alert("Wicket!");
                     endGame();
                 } 
             } else{
@@ -287,7 +289,6 @@ function flowChanger(){
     localStorage.setItem("anotherSumma","false");
     let something = localStorage.getItem("decision");
     target = parseInt(localStorage.getItem("runs"));
-    alert("Wicket!");
     if(something == "batting"){
         localStorage.setItem("decision","bowling");
         document.getElementById("output3").innerHTML = "Target :" + (target+1) ;
@@ -305,14 +306,15 @@ function endGame(){
     let scoredValue = localStorage.getItem("runs");
     let target = localStorage.getItem("tarRuns");
     let knowDecision = localStorage.getItem("decision");
+
     if(scoredValue >= target){
         if(knowDecision == "bowling"){
             document.getElementById("output2").innerHTML = "You Scored : " + scoredValue;
-            alert("You have won the Match!"); // User won in 2nd batting.
+            alert("You have won the Match!");
             window.location.href = "Home_page.html";
         } else if(knowDecision == "batting"){
             document.getElementById("output2").innerHTML = "You Scored : " + scoredValue;
-            alert("Oops! You Lost."); // User lost in 2nd batting.
+            alert("Oops! You lost.");
             window.location.href = "Home_page.html";
         } else{
             alert("Error");
@@ -320,12 +322,12 @@ function endGame(){
     } else{
         if(knowDecision == "bowling"){
             
-            alert("You have won the Match!"); // User won in 1st batting
+            alert("You have won the match.");
             document.getElementById("output2").innerHTML = "Computer Scored : " + scoredValue;
             window.location.href = "Home_page.html";
         } else if(knowDecision == "batting"){
             document.getElementById("output2").innerHTML = "Computer Scored : " + scoredValue;
-            alert("Oops! You Lost."); // User lost in 1st batting.
+            alert("Oops! You Lost.");
             window.location.href = "Home_page.html";
         } else{
             alert("Error");
