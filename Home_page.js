@@ -308,11 +308,11 @@ function endGame(){
     if(scoredValue >= target){
         if(knowDecision == "bowling"){
             document.getElementById("output2").innerHTML = "You Scored : " + scoredValue;
-            alert("You have won the Match! 0"); // User won in 2nd batting.
+            alert("You have won the Match!"); // User won in 2nd batting.
             window.location.href = "Home_page.html";
         } else if(knowDecision == "batting"){
             document.getElementById("output2").innerHTML = "You Scored : " + scoredValue;
-            alert("Oops! You Lost. 0"); // User lost in 2nd batting.
+            alert("Oops! You Lost."); // User lost in 2nd batting.
             window.location.href = "Home_page.html";
         } else{
             alert("Error");
@@ -320,12 +320,12 @@ function endGame(){
     } else{
         if(knowDecision == "bowling"){
             
-            alert("You have won the Match! 1"); // User won in 1st batting
+            alert("You have won the Match!"); // User won in 1st batting
             document.getElementById("output2").innerHTML = "Computer Scored : " + scoredValue;
             window.location.href = "Home_page.html";
         } else if(knowDecision == "batting"){
             document.getElementById("output2").innerHTML = "Computer Scored : " + scoredValue;
-            alert("Oops! You Lost. 1"); // User lost in 1st batting.
+            alert("Oops! You Lost."); // User lost in 1st batting.
             window.location.href = "Home_page.html";
         } else{
             alert("Error");
@@ -336,39 +336,3 @@ function endGame(){
 function homePage(){
     window.location.href = "Home_page.html";
 }
-
-
-
-// let knowCompDeci = localStorage.getItem("compDecision")
-//     alert("wicket");
-//     console.log(knowDecision);
-//     if(knowDecision == "bowling"){ // 1st batting
-//         if(scoredValue >= target){
-//             alert("Computer won on second batting");
-//             document.getElementById("output2").innerHTML = "Computer Scored : " + scoredValue;
-//             window.location.href = "Home_page.html";
-//         } else if(scoredValue < target){
-//             alert("You won on first batting");
-//             document.getElementById("output2").innerHTML = "Computer Scored : " + scoredValue;
-//             window.location.href = "Home_page.html";
-//         } else{
-//             alert("Error404");
-//         }
-//     } else if(knowDecision == "batting"){ // 1st bowling
-//         if(scoredValue >= target){
-//             alert("You won on second batting");
-//             document.getElementById("output2").innerHTML = "Computer Scored : " + scoredValue;
-//             window.location.href = "Home_page.html";
-//         } else if(scoredValue < target){
-//             alert("Computer won on first batting");
-//             document.getElementById("output2").innerHTML = "Computer Scored : " + scoredValue;
-//             window.location.href = "Home_page.html";
-//         } else{
-//             alert("Error404");
-//         }
-//     } else{
-//         alert("Error404");
-//     }
-
-
-// summa
